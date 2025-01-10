@@ -27,7 +27,7 @@ st.markdown(
     """
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h1 style="margin: 0;">Multimodal AI Summarizer 🎥🖬</h1>
-        <span style="font-size: 24px; font-weight: bold;">Created by: Muhammad Qasim UET, Lahore</span>
+        <span style="font-size: 24px; font-weight: bold;">Created by:Electrical Eng.Muhammad Qasim</span>
     </div>
     """,
     unsafe_allow_html=True
