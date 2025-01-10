@@ -19,7 +19,7 @@ from pathlib import Path
 # Load environment variables
 load_dotenv()
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "service.json"
-genai.configure(api_key="AIzaSyDlGuiJOqQePVsQEu5gWiftb74RDGvcq-c")
+genai.configure(api_key="AIzaSyBnLoc0ZuZtTkPyy7BC6AzG_F5gWn5Da9k")
 
 # Set up Streamlit
 st.set_page_config(page_title="Multimodal AI Summarizer", layout="wide")
@@ -27,7 +27,7 @@ st.markdown(
     """
     <div style="display: flex; justify-content: space-between; align-items: center;">
         <h1 style="margin: 0;">Multimodal AI Summarizer 🎥🖬</h1>
-        <span style="font-size: 24px; font-weight: bold;">Created by: Muhammad Uzair</span>
+        <span style="font-size: 24px; font-weight: bold;">Created by: Muhammad Qasim UET, Lahore</span>
     </div>
     """,
     unsafe_allow_html=True
@@ -51,7 +51,7 @@ def get_text_chunks(text):
 
 @st.cache_resource
 def get_vector_store(text_chunks):
-    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key="AIzaSyDlGuiJOqQePVsQEu5gWiftb74RDGvcq-c")
+    embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key="AIzaSyBnLoc0ZuZtTkPyy7BC6AzG_F5gWn5Da9k")
     vector_store = FAISS.from_texts(text_chunks, embedding=embeddings)
     vector_store.save_local("faiss_index")
     return vector_store
